@@ -25,7 +25,10 @@ class CreateStudentsTable extends Migration
             $table->text('Subjects');
 
             $table->timestamps();
-            $table->foreign('Roll_number')->references('id')->on('students')->onDelete('cascade');
+            $table->foreign('Roll_number')
+            ->references('id')
+            ->on('students')
+            ->onDelete('cascade');
         });
     }
 
